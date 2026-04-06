@@ -1,0 +1,64 @@
+<svg viewBox="0 0 800 750" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradOLTP" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4e54c8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8f94fb;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradOLAP" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#11998e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38ef7d;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradDuckDB" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f953c6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b91d73;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="750" fill="#0fаf1e"/>
+
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    OLTP vs OLAP &amp; DuckDB
+  </text>
+
+  <g transform="translate(50, 100)">
+    <rect width="700" height="180" rx="15" fill="url(#gradOLTP)" opacity="0.9"/>
+    <text x="350" y="35" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">OLTP (Online Transaction Processing)</text>
+    <text x="350" y="65" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">Оперативная обработка транзакций</text>
+
+    <g font-family="Arial, sans-serif" font-size="14" fill="#e0e0e0" text-anchor="middle">
+      <text x="350" y="95">Для быстрых вставок, обновлений и большого числа пользователей.</text>
+      <text x="350" y="115">Высокая согласованность данных (ACID).</text>
+      <text x="350" y="135" fill="#ffffff" font-weight="bold">Примеры: PostgreSQL, MySQL, Oracle.</text>
+    </g>
+
+    <text x="300" y="165" font-size="24" opacity="0.7">💳 🏦 ⚡</text>
+  </g>
+
+  <g transform="translate(50, 310)">
+    <rect width="700" height="180" rx="15" fill="url(#gradOLAP)" opacity="0.9"/>
+    <text x="350" y="35" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">OLAP (Online Analytical Processing)</text>
+    <text x="350" y="65" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">Аналитическая обработка данных</text>
+
+    <g font-family="Arial, sans-serif" font-size="14" fill="#e0e0e0" text-anchor="middle">
+      <text x="350" y="95">Сложные запросы, агрегации и работа с огромными таблицами.</text>
+      <text x="350" y="115">Оптимизировано для чтения (Columnar storage).</text>
+      <text x="350" y="135" fill="#ffffff" font-weight="bold">Примеры: ClickHouse, Snowflake, Redshift.</text>
+    </g>
+
+    <text x="300" y="165" font-size="24" opacity="0.7">📊 📑 📈</text>
+  </g>
+
+  <g transform="translate(50, 520)">
+    <rect width="700" height="180" rx="15" fill="url(#gradDuckDB)" opacity="0.9"/>
+    <text x="350" y="35" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">DuckDB — OLAP в кармане</text>
+    <text x="350" y="65" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">Аналитический движок, а не операционная БД</text>
+
+    <g font-family="Arial, sans-serif" font-size="14" fill="#e0e0e0" text-anchor="middle">
+      <text x="350" y="95">Идеально для Data Science, отчетов и быстрой аналитики на месте.</text>
+      <text x="350" y="115">Не подходит для high-load транзакций и микросервисов.</text>
+      <text x="350" y="135" fill="#ffffff" font-weight="bold">Роль: Локальный аналитический движок.</text>
+    </g>
+
+    <text x="300" y="165" font-size="24" opacity="0.9">🦆 ✨ 🧪</text>
+  </g>
+</svg>
