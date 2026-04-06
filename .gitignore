@@ -208,3 +208,5 @@ __marimo__/
 
 # Project
 data
+/code/duckdb.duckdb
+/code/titanic.csv
