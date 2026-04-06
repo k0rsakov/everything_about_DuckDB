@@ -1,6 +1,6 @@
 # ACID
 
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+![](<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
@@ -131,4 +131,4 @@
     <circle cx="585" cy="522" r="8" fill="#ffffff" opacity="0.6"/>
     <path d="M 585 517 L 585 527 M 580 522 L 590 522" stroke="#1a1a2e" stroke-width="2"/>
   </g>
-</svg>
+</svg>)
