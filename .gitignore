@@ -212,3 +212,4 @@ data
 /code/titanic.csv
 02_quick_start_cli/duckdb.duckdb
 03_quick_start_dbeaver/duckdb.duckdb
+06_read_diff_file_formats_duckdb/fake_data.*
