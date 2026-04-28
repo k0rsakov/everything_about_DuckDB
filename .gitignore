@@ -210,3 +210,4 @@ __marimo__/
 data
 /code/duckdb.duckdb
 /code/titanic.csv
+02_quick_start_cli/duckdb.duckdb
