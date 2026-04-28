@@ -211,3 +211,4 @@ data
 /code/duckdb.duckdb
 /code/titanic.csv
 02_quick_start_cli/duckdb.duckdb
+03_quick_start_dbeaver/duckdb.duckdb
