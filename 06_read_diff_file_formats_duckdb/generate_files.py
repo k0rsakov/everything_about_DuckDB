@@ -3,7 +3,7 @@ import duckdb
 
 # .csv, .parquet
 duckdb.query(
-    '''
+    """
     INSTALL fakeit FROM community;
     LOAD fakeit;
     
@@ -18,13 +18,13 @@ duckdb.query(
     
     COPY fake_data TO 'fake_data.csv';
     COPY fake_data TO 'fake_data.parquet';
-    '''
+    """
 )
 
 # .json
 
 duckdb.query(
-"""
+    """
     COPY
     (
         SELECT
