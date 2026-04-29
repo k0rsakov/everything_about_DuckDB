@@ -27,5 +27,3 @@ duckdb.query(
     TO 'fake_data_1.csv';
     """
 )
-
-
