@@ -7,10 +7,11 @@
 
 ## Notes
 
-В DuckDB существует нативная команда `INSTALL extension` для установки расширений, но не существует команды `UNINSTALL
+В DuckDB существует нативная команда — `INSTALL extension` для установки расширений, но не существует команды `UNINSTALL
 extension`. Поэтому для удаления расширения необходимо удалить файл расширения вручную.
 
 В репозитории DuckDB есть обсуждение по поводу добавления команды `UNINSTALL extension`:
+
 - [UNINSTALL extension #16566](https://github.com/duckdb/duckdb/discussions/16566)
 
 Команда для удаления расширения:

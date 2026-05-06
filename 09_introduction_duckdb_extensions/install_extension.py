@@ -17,7 +17,7 @@ duckdb.query(
 )
 
 print(
-    "Список доступных расширений в DuckDB:\n",
+    "\n\n\nСписок доступных расширений в DuckDB:\n",
     duckdb.query(
         """
         SELECT extension_name, description FROM duckdb_extensions();
