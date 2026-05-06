@@ -3,7 +3,9 @@
 Документация:
 
 - [Extensions](https://duckdb.org/docs/current/extensions/overview)
-- [List of Community Extensions](https://duckdb.org/community_extensions/list_of_extensions)
+- Списки расширений:
+  - [Core Extensions](https://duckdb.org/docs/current/core_extensions/overview)
+  - [List of Community Extensions](https://duckdb.org/community_extensions/list_of_extensions)
 
 ## Notes
 
@@ -13,3 +15,7 @@
 
 А расширения из [List of Community Extensions](https://duckdb.org/community_extensions/list_of_extensions) необходимо
 устанавливать самостоятельно.
+
+```bash
+rm /Users/i.korsakov/.duckdb/extensions/v1.5.1/osx_arm64/tpch.duckdb_extension
+```
