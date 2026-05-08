@@ -22,6 +22,8 @@ duckdb.query(
     """
 )
 
+print(duckdb.query("COPY (SELECT * FROM orders LIMIT 5) TO 'fake_data.csv'"))
+
 
 print(
     duckdb.query(
