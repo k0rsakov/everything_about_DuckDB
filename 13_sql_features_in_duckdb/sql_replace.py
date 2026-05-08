@@ -6,7 +6,7 @@ print(
         """
         SELECT * FROM 'fake_data.parquet'
         """
-    )
+    ),
 )
 
 print(
@@ -15,5 +15,5 @@ print(
         """
         SELECT * REPLACE (upper(country) AS country) FROM 'fake_data.parquet'
         """
-    )
+    ),
 )

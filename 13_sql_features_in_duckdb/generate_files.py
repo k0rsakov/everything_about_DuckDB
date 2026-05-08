@@ -17,4 +17,3 @@ duckdb.query(
     COPY fake_data TO 'fake_data.parquet';
     """
 )
-

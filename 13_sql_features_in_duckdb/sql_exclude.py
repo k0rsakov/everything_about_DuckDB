@@ -6,7 +6,7 @@ print(
         """
         SELECT * FROM 'fake_data.parquet'
         """
-    )
+    ),
 )
 
 print(
@@ -15,5 +15,5 @@ print(
         """
         SELECT * EXCLUDE (email, city) FROM 'fake_data.parquet'
         """
-    )
+    ),
 )
