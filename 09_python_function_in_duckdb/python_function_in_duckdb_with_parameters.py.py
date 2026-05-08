@@ -1,6 +1,5 @@
 import duckdb
 from duckdb.sqltypes import BIGINT, BOOLEAN
-from random import randint
 
 
 def check_parity(value: int | None = None) -> bool:
