@@ -85,7 +85,7 @@ print(
         """
         SELECT
             date_trunc('year', tpep_pickup_datetime) AS pickup_year,
-            EXTRACT(QUARTER FROM date_trunc('year', tpep_pickup_datetime)) AS pickup_quarter, 
+            EXTRACT(QUARTER FROM date_trunc('year', tpep_pickup_datetime)) AS pickup_quarter,
             COUNT(*) AS trip_count
         FROM
             's3://prod/yellow_tripdata/*/0[1-3]/data.parquet'
@@ -101,3 +101,32 @@ print(
         """
     )
 )
+
+# 2020-2025, январь-февраль-декабрь (зима)
+print(
+    con.query(
+        """
+        SELECT
+            date_trunc('year', tpep_pickup_datetime) AS pickup_year,
+            date_trunc('month', tpep_pickup_datetime) AS pickup_month,
+            COUNT(*) AS trip_count
+        FROM
+            read_parquet(
+                [
+                    's3://prod/yellow_tripdata/*/01/data.parquet',
+                    's3://prod/yellow_tripdata/*/02/data.parquet',
+                    's3://prod/yellow_tripdata/*/12/data.parquet'
+                ]
+            )
+        WHERE
+            1=1
+            AND tpep_pickup_datetime BETWEEN '2020-01-01' AND '2026-01-01'
+        GROUP BY
+            1, 2
+        ORDER BY
+            1, 2
+        """
+    )
+)
+
+# TODO: добавить пример использования filename при матчинге
