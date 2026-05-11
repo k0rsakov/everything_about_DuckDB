@@ -20,7 +20,7 @@ print(
     con.query(
         """ 
         SELECT count()
-        FROM 's3://prod/yellow_tripdata/2025/12/data.parquet';
+        FROM 's3://prod/yellow_tripdata_example/2025/12/data.parquet';
         """
     )
 )
@@ -29,7 +29,7 @@ print(
     con.query(
         """
         SELECT *
-        FROM 's3://prod/yellow_tripdata/2025/12/data.parquet'
+        FROM 's3://prod/yellow_tripdata_example/2025/12/data.parquet'
         LIMIT 5;
         """
     )

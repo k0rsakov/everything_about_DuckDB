@@ -16,6 +16,6 @@ duckdb.query(
         SELECT *
         FROM 'https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2025-12.parquet'
     )
-    TO 's3://prod/yellow_tripdata/2025/12/data.parquet'
+    TO 's3://prod/yellow_tripdata_example/2025/12/data.parquet'
     """
 )
