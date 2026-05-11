@@ -215,3 +215,4 @@ data
 06_read_diff_file_formats_duckdb/fake_data.*
 07_read_diff_schema/fake_data_*
 13_sql_features_in_duckdb/fake_data.*
+16_duckdb_minio_s3/data
