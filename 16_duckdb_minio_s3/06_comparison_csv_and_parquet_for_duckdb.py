@@ -53,3 +53,5 @@ print(df_csv.explain_value[0])
 
 print("\n🪵 PARQUET:")
 print(df_parquet.explain_value[0])
+
+con.close()
