@@ -2,6 +2,19 @@ import time
 
 import duckdb
 
+con = duckdb.connect()
+
+con.query(
+    """
+    INSTALL httpfs;
+    LOAD httpfs;
+    SET s3_endpoint = 'localhost:9000';
+    SET s3_use_ssl = false;
+    SET s3_url_style = 'path';
+    SET s3_access_key_id = 'minioadmin';
+    SET s3_secret_access_key = 'minioadmin';
+    """
+)
 
 base_url = "https://d37ci6vzurychx.cloudfront.net/trip-data"
 s3_path = "s3://prod/yellow_tripdata"
@@ -22,30 +35,29 @@ for year in range(start_year, end_year + 1):
         # Целевой путь в MinIO с партиционированием
         target_s3_key = f"{s3_path}/{year}/{month_str}/data.parquet"
 
-        print(f"📦 Обработка: {year}-{month_str}...")
+        df = con.query(f"SELECT count() FROM '{target_s3_key}'").df()
 
         try:
-            # Основной запрос: читаем по ссылке -> пишем в S3
-            duckdb.query(
-                f"""
-                INSTALL httpfs;
-                LOAD httpfs;
-                SET s3_endpoint = 'localhost:9000';
-                SET s3_use_ssl = false;
-                SET s3_url_style = 'path';
-                SET s3_access_key_id = 'minioadmin';
-                SET s3_secret_access_key = 'minioadmin';
-                
-                COPY
-                (
-                    SELECT *
-                    FROM '{url}'
-                )
-                TO '{target_s3_key}' (FORMAT 'PARQUET');
-            """)
-            print(f"✅ Успешно: {target_s3_key}")
-        except Exception as e:
-            # Обработка случаев, если данных за конкретный месяц еще нет (например, конец 2025)
-            print(f"⚠️ Ошибка при загрузке {year}-{month_str}: {e}")
-time.sleep(3)
-print("\n✨ Загрузка завершена!")
+            if df.iloc[0, 0] > 0:
+                print(f"✅ Пропускаю {year}-{month_str} (уже загружено)")
+        except _duckdb.HTTPException:
+            print(f"📦 Обработка: {year}-{month_str}...")
+            try:
+                # Основной запрос: читаем по ссылке -> пишем в S3
+                duckdb.query(
+                    f"""
+                    COPY
+                    (
+                        SELECT *
+                        FROM '{url}'
+                    )
+                    TO '{target_s3_key}' (FORMAT 'PARQUET');
+                """)
+                print(f"✅ Успешно: {target_s3_key}")
+            except Exception as e:
+                # Обработка случаев, если данных за конкретный месяц еще нет (например, конец 2025)
+                print(f"⚠️ Ошибка при загрузке {year}-{month_str}: {e}")
+    time.sleep(3)
+    print("\n✨ Загрузка завершена!")
+
+con.close()
