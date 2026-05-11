@@ -45,9 +45,11 @@ for year in range(start_year, end_year + 1):
                     """
                 )
                 print(f"✅ Успешно загружено: {target_s3_key}")
-            except Exception as e:
+            except Exception:
                 # На случай, если данных еще нет на сайте NYC TLC (например, будущие месяцы)
-                print(f"⚠️ Ошибка (возможно, данных нет на источнике): {year}-{month_str}")
+                print(
+                    f"⚠️ Ошибка (возможно, данных нет на источнике): {year}-{month_str}"
+                )
 
     # Спим после каждого года, чтобы не "пугать" API источника
     time.sleep(3)
