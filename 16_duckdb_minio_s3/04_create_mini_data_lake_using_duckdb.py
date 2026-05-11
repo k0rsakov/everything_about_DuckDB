@@ -1,5 +1,4 @@
 import time
-
 import duckdb
 
 con = duckdb.connect()
@@ -25,39 +24,34 @@ print(f"🚀 Начинаю загрузку данных Yellow Taxi за {star
 
 for year in range(start_year, end_year + 1):
     for month in range(1, 13):
-        # Форматируем месяц с ведущим нулем (например, 01, 02...)
         month_str = f"{month:02d}"
-
-        # Формируем имя файла и URL
         file_name = f"yellow_tripdata_{year}-{month_str}.parquet"
         url = f"{base_url}/{file_name}"
-
-        # Целевой путь в MinIO с партиционированием
         target_s3_key = f"{s3_path}/{year}/{month_str}/data.parquet"
 
-        df = con.query(f"SELECT count() FROM '{target_s3_key}'").df()
-
         try:
-            if df.iloc[0, 0] > 0:
-                print(f"✅ Пропускаю {year}-{month_str} (уже загружено)")
-        except _duckdb.HTTPException:
+            # Пытаемся просто проверить наличие файла через описание (самый быстрый способ)
+            con.query(f"SELECT 1 FROM '{target_s3_key}' LIMIT 1")
+            print(f"✅ Пропускаю {year}-{month_str} (уже загружено)")
+
+        except (duckdb.IOException, duckdb.HTTPException):
+            # Если файла нет (404), DuckDB бросит ошибку — значит, нужно загружать
             print(f"📦 Обработка: {year}-{month_str}...")
             try:
-                # Основной запрос: читаем по ссылке -> пишем в S3
-                duckdb.query(
+                con.query(
                     f"""
-                    COPY
-                    (
-                        SELECT *
-                        FROM '{url}'
-                    )
+                    COPY (SELECT * FROM '{url}') 
                     TO '{target_s3_key}' (FORMAT 'PARQUET');
-                """)
-                print(f"✅ Успешно: {target_s3_key}")
+                    """
+                )
+                print(f"✅ Успешно загружено: {target_s3_key}")
             except Exception as e:
-                # Обработка случаев, если данных за конкретный месяц еще нет (например, конец 2025)
-                print(f"⚠️ Ошибка при загрузке {year}-{month_str}: {e}")
+                # На случай, если данных еще нет на сайте NYC TLC (например, будущие месяцы)
+                print(f"⚠️ Ошибка (возможно, данных нет на источнике): {year}-{month_str}")
+
+    # Спим после каждого года, чтобы не "пугать" API источника
     time.sleep(3)
-    print("\n✨ Загрузка завершена!")
+    print(f"\n--- Год {year} обработан ---")
 
 con.close()
+print("\n✨ Загрузка полностью завершена!")
