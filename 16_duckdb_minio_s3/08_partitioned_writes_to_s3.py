@@ -33,12 +33,14 @@ con.query(
     """
 )
 
+print("📖 Чтение всех файлов .parquet в папке с партициями:")
 print(
     con.query(
         "SELECT count() FROM 's3://prod/partition_yellow_tripdata/*/*/*.parquet' LIMIT 5;"
     )
 )
 
+print("🗓️ Чтение всех файлов .parquet в папке с партициями, отфильтрованных по году:")
 print(
     con.query(
         """
@@ -64,4 +66,5 @@ df_explain = con.query(
     """
 ).df()
 
+print("✈️ План запроса при работе с партициями:")
 print(df_explain.explain_value[0])
