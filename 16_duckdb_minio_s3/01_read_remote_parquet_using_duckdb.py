@@ -2,6 +2,9 @@ import duckdb
 
 duckdb.query(
     """
+    INSTALL httpfs;
+    LOAD httpfs;
+    
     CREATE OR REPLACE TABLE yellow_tripdata AS
     SELECT *
     FROM 'https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2025-12.parquet'
