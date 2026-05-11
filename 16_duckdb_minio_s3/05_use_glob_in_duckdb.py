@@ -148,3 +148,5 @@ print(
         """
     )
 )
+
+con.close()
