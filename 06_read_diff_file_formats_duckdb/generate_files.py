@@ -22,7 +22,6 @@ duckdb.query(
 )
 
 # .json
-
 duckdb.query(
     """
     COPY
