@@ -1,4 +1,4 @@
-x-config: &val "foo"
+x-config: &val "prod"
 
 services:
   minio:
