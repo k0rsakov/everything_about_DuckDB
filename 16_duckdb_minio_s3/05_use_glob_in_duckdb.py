@@ -129,4 +129,22 @@ print(
     )
 )
 
-# TODO: добавить пример использования filename при матчинге
+# Исследование выбросов за период 2020-2021-2022
+print(
+    con.query(
+        """
+        SELECT
+            filename,
+            date_trunc('year', tpep_pickup_datetime) AS pickup_year,
+            COUNT(*) AS trip_count
+        FROM
+            's3://prod/yellow_tripdata/202[0-2]/*/data.parquet'
+        WHERE
+            1=1
+        GROUP BY
+            1, 2
+        ORDER BY
+            2
+        """
+    )
+)
