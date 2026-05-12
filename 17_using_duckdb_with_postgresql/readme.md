@@ -7,3 +7,5 @@
 - Чтение файлов:
     - [Parquet](https://duckdb.org/docs/current/data/parquet/overview)
 - [COPY Statement](https://duckdb.org/docs/current/sql/statements/copy)
+- [PostgreSQL Extension](https://duckdb.org/docs/current/core_extensions/postgres)
+- [Data Types](https://duckdb.org/docs/current/sql/data_types/overview)
