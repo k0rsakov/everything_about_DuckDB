@@ -11,9 +11,11 @@ con.query(
     "AS db (TYPE postgres, SCHEMA 'public');"
 )
 
-print(con.query(
-    """
-    SELECT *
-    FROM db.tbl
-    """
-))
+print(
+    con.query(
+        """
+        SELECT *
+        FROM db.tbl
+        """
+    )
+)
