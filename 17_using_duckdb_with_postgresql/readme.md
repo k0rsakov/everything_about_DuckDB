@@ -8,4 +8,5 @@
     - [Parquet](https://duckdb.org/docs/current/data/parquet/overview)
 - [COPY Statement](https://duckdb.org/docs/current/sql/statements/copy)
 - [PostgreSQL Extension](https://duckdb.org/docs/current/core_extensions/postgres)
+  - [Querying Postgres Tables Directly from DuckDB](https://duckdb.org/2022/09/30/postgres-scanner)
 - [Data Types](https://duckdb.org/docs/current/sql/data_types/overview)
