@@ -216,4 +216,4 @@ data
 07_read_diff_schema/fake_data_*
 13_sql_features_in_duckdb/fake_data.*
 16_using_duckdb_with_minio_s3/data
-19_using_jupy_sql_for_duckdb_in_jupyterlab/.ipynb_checkpoints
+19_using_jupysql_for_duckdb_in_jupyterlab/.ipynb_checkpoints
