@@ -1,0 +1,11 @@
+services:
+  db:
+    image: pgduckdb/pgduckdb:18-main
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${PASSWORD:-postgres}
+    volumes:
+      - ./docker/postgresql.conf:/etc/postgresql/postgresql.conf
+    command: postgres -c 'config_file=/etc/postgresql/postgresql.conf'
