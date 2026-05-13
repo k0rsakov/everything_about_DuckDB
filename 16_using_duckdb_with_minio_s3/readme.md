@@ -11,3 +11,18 @@
 - [Pattern Matching](https://duckdb.org/docs/current/sql/functions/pattern_matching)
 - [Reading Multiple Files](https://duckdb.org/docs/current/data/multiple_files/overview)
 - [Partitioned Writes](https://duckdb.org/docs/lts/data/partitioning/partitioned_writes)
+
+## `VIEW` для упрощения работы с S3
+
+Не всегда удобно и легко прописывать пути в S3. Поэтому можно создавать представления (`VIEW`) для более быстрой работы
+с данными.
+
+**\# Пример:**
+
+```sql
+CREATE OR REPLACE VIEW trips_20_21_22 AS
+SELECT
+  *
+FROM
+  's3://prod/yellow_tripdata/202[0-2]/*/data.parquet'
+```
