@@ -1,7 +1,7 @@
 # Быстрый старт через DBeaver
 
 Для установки DuckDB в DBeaver вам необходимо зайти в DBeaver и нажать на "*розетку*" 🔌:
-![](../images/DuckDB_DBeaver_connect.png)
+![](DuckDB_DBeaver_connect.png)
 
 У вас установятся все необходимые драйвера для работы DuckDB и вы сможете начать работу с DuckDB.
 
@@ -20,14 +20,14 @@
 3) Нажмите "***Driver Settings***".
 4) Выберите пункт "***Libraries***" и посмотрите какая версия пакета у вас установлена.
 
-![](../images/DuckDB_DBeaver_version_control.png)
+![](DuckDB_DBeaver_version_control.png)
 
 После этого скачайте необходимую версию
 с [репозитория DuckDB Maven](https://mvnrepository.com/artifact/org.duckdb/duckdb_jdbc). Сохраните локально. В пункте 
 "***Libraries***" удалите старый драйвер и добавьте новый.
 
 После этого если выполните запрос на получение версии и получите необходимую версию пакета:
-![](../images/DuckDB_DBeaver_change_version.png)
+![](DuckDB_DBeaver_change_version.png)
 
 ## Работа с DuckDB в DBeaver
 
