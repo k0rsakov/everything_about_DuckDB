@@ -43,7 +43,7 @@
     <!-- Column Vector (Age) -->
     <rect x="120" y="190" width="140" height="240" fill="#ffffff" fill-opacity="0.2" stroke="#ffffff" stroke-width="2" rx="8"/>
     <text x="190" y="220" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#ffffff">
-      Age
+      id
     </text>
 
     <!-- Cache Lines Visualization -->
