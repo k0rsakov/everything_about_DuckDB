@@ -27,8 +27,8 @@
     - Для простого обмена табличными данными между системами.
     - Когда важна совместимость и человекочитаемость.
 
-![](../files_images/csv_raw.png)
-![](../files_images/csv_formatted.png)
+![](csv_raw.png)
+![](csv_formatted.png)
 
 ## JSON (JavaScript Object Notation)
 
@@ -46,8 +46,8 @@
     - Для хранения и передачи semi-structured (слабоструктурированные данные) данных (логи, API, сложные объекты).
     - Когда нужна вложенность и гибкость.
 
-![](../files_images/json_raw.png)
-![](../files_images/json_formatted.png)
+![](json_raw.png)
+![](json_formatted.png)
 
 ## Parquet
 
