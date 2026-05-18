@@ -66,3 +66,17 @@ DuckDB поддерживает constraints (ограничения). Если �
 - [Profiling](https://duckdb.org/docs/current/dev/profiling)
 - [DuckDB execution plan visualizer](https://db.cs.uni-tuebingen.de/explain/)
 
+## DuckLake
+
+DuckLake — это один из сильных ударов в сторону Apache Iceberg. Это новый формат хранения данных, который поддерживает
+ACID транзакции, версионирование данных и путешествия во времени.
+
+2026-04-13 вышла v1.0, с которой можно стартовать и изучать данный формат, подобнее тут — [DuckLake v1.0: The Lakehouse Format Built on SQL Reaches Production-Readiness](https://ducklake.select/2026/04/13/ducklake-10/)
+
+Более подробно про DuckLake можно узнать из видео — [DuckLake - The SQL-Powered Lakehouse Format for the Rest of Us by Prof. Hannes Mühleisen](https://www.youtube.com/watch?v=YQEUkFWa69o)
+
+Документация:
+- [DuckLake](https://duckdb.org/docs/current/core_extensions/ducklake)
+- [DuckLake v1.0: The Lakehouse Format Built on SQL Reaches Production-Readiness](https://ducklake.select/2026/04/13/ducklake-10/)
+- [DuckLake - The SQL-Powered Lakehouse Format for the Rest of Us by Prof. Hannes Mühleisen](https://www.youtube.com/watch?v=YQEUkFWa69o)
+
