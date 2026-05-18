@@ -150,9 +150,16 @@ MVCC (Multi-Version Concurrency Control) — это механизм управ�
 - [DuckDB vs. Polars: Performance & Memory on Massive Parquet Data](https://www.codecentric.de/en/knowledge-hub/blog/duckdb-vs-polars-performance-and-memory-with-massive-parquet-data)
 - [DuckDB vs Apache Spark — The Fall of the Cluster?](https://medium.com/@mamidipaka2003/duckdb-vs-apache-spark-the-fall-of-the-cluster-c28bea3e4d38)
 
+## DuckDB vs chDB
 
+После того как DuckDB стал довольно популярным, многие компании начали создавать свои решения на основе DuckDB. Одним из
+таких решений является chDB — это SQL OLAP движок созданный на базе ClickHouse.
 
+Документация:
 
+- [chDB ClickHouse site](https://clickhouse.com/docs/chdb)
+- [chDB GitHub](https://github.com/chdb-io/chdb)
+- [Comparing DuckDB, ChDB and Polars like a noob](https://medium.com/@MarinAgli1/comparing-duckdb-chdb-and-polars-like-a-noob-ad74584456b9)
 
 
 
