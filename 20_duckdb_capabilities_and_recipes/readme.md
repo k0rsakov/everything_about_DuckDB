@@ -80,3 +80,10 @@ ACID транзакции, версионирование данных и пут
 - [DuckLake v1.0: The Lakehouse Format Built on SQL Reaches Production-Readiness](https://ducklake.select/2026/04/13/ducklake-10/)
 - [DuckLake - The SQL-Powered Lakehouse Format for the Rest of Us by Prof. Hannes Mühleisen](https://www.youtube.com/watch?v=YQEUkFWa69o)
 
+## MotherDuck
+
+MotherDuck — это облачный сервис, который позволяет использовать DuckDB в облаке. Он поддерживает все возможности DuckDB, а также предоставляет дополнительные функции, такие как автоматическое масштабирование, управление пользователями и интеграция с другими облачными сервисами.
+
+Документация:
+- [MotherDuck](https://motherduck.com/)
+
