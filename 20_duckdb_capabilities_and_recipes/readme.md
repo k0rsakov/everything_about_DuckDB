@@ -119,9 +119,22 @@ SQLite — это легковесная база данных (OLTP), кото�
 
 - [DuckDB vs SQLite: Which Embedded Database Should You Use?](https://motherduck.com/learn/duckdb-vs-sqlite-databases/)
 
+## MVCC
 
+MVCC (Multi-Version Concurrency Control) — это механизм управления конкурентным доступом к данным, который позволяет
+обеспечить высокую производительность и согласованность данных при работе с несколькими транзакциями одновременно.
 
+Грубо говоря, DuckDB позволяет работать с одной базой данных нескольким процессам одновременно.
 
+> **Но есть одно важное ограничение.**
+>
+> При работе с одной базой данных только один процесс может находиться в состоянии `read-write`, а все остальные могут
+> быть только в состоянии `read-only`.
+
+Документация:
+
+- [Concurrency](https://duckdb.org/docs/current/connect/concurrency)
+- [Analytics-Optimized Concurrent Transactions](https://duckdb.org/2024/10/30/analytics-optimized-concurrent-transactions)
 
 
 
