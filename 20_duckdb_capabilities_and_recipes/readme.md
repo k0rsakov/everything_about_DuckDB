@@ -23,3 +23,21 @@
 Документация:
 
 - [Enum Data Type](https://duckdb.org/docs/current/sql/data_types/enum)
+
+## Обновление значений (`UPDATE`)
+
+`UPDATE` работает, но классический подход в виде `UPSERT` будет в разы эффективнее.
+
+DuckDB поддерживает constraints (ограничения). Если рассмотреть привычный всем constraint — `PRIMARY KEY`, то оно
+работает. Но необходимо смотреть на производительность на ваших данных. Потому что это может замедлить транзакционные
+механизмы.
+
+К примеру, если использовать конструкцию `ON CONFLICT` на большом наборе вы можете получить оверхед по RAM. Используйте
+аккуратно.
+
+Документация:
+
+- [UPDATE Statement](https://duckdb.org/docs/current/sql/statements/update)
+- [Constraints](https://duckdb.org/docs/current/sql/constraints)
+- [INSERT Statement](https://duckdb.org/docs/current/sql/statements/insert#on-conflict-clause)
+  - [ON CONFLICT Clause](https://duckdb.org/docs/current/sql/statements/insert#on-conflict-clause)
