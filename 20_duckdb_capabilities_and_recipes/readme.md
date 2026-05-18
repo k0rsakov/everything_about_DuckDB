@@ -71,19 +71,36 @@ DuckDB поддерживает constraints (ограничения). Если �
 DuckLake — это один из сильных ударов в сторону Apache Iceberg. Это новый формат хранения данных, который поддерживает
 ACID транзакции, версионирование данных и путешествия во времени.
 
-2026-04-13 вышла v1.0, с которой можно стартовать и изучать данный формат, подобнее тут — [DuckLake v1.0: The Lakehouse Format Built on SQL Reaches Production-Readiness](https://ducklake.select/2026/04/13/ducklake-10/)
+2026-04-13 вышла v1.0, с которой можно стартовать и изучать данный формат, подобнее
+тут — [DuckLake v1.0: The Lakehouse Format Built on SQL Reaches Production-Readiness](https://ducklake.select/2026/04/13/ducklake-10/)
 
-Более подробно про DuckLake можно узнать из видео — [DuckLake - The SQL-Powered Lakehouse Format for the Rest of Us by Prof. Hannes Mühleisen](https://www.youtube.com/watch?v=YQEUkFWa69o)
+Более подробно про DuckLake можно узнать из
+видео — [DuckLake - The SQL-Powered Lakehouse Format for the Rest of Us by Prof. Hannes Mühleisen](https://www.youtube.com/watch?v=YQEUkFWa69o)
 
 Документация:
+
 - [DuckLake](https://duckdb.org/docs/current/core_extensions/ducklake)
 - [DuckLake v1.0: The Lakehouse Format Built on SQL Reaches Production-Readiness](https://ducklake.select/2026/04/13/ducklake-10/)
 - [DuckLake - The SQL-Powered Lakehouse Format for the Rest of Us by Prof. Hannes Mühleisen](https://www.youtube.com/watch?v=YQEUkFWa69o)
 
 ## MotherDuck
 
-MotherDuck — это облачный сервис, который позволяет использовать DuckDB в облаке. Он поддерживает все возможности DuckDB, а также предоставляет дополнительные функции, такие как автоматическое масштабирование, управление пользователями и интеграция с другими облачными сервисами.
+MotherDuck — это облачный сервис, который позволяет использовать DuckDB в облаке. Он поддерживает все возможности
+DuckDB, а также предоставляет дополнительные функции, такие как автоматическое масштабирование, управление
+пользователями и интеграция с другими облачными сервисами.
 
 Документация:
+
 - [MotherDuck](https://motherduck.com/)
 
+## Макросы
+
+Макросы — это мощный инструмент, который позволяет создавать пользовательские функции и расширять функциональность
+DuckDB.
+
+Мы рассматривали интеграцию Python функций в DuckDB — [09_python_function_in_duckdb](../09_python_function_in_duckdb).
+Но данный функционал может быть удобнее для некоторых кейсов.
+
+Документация:
+
+- [CREATE MACRO Statement](https://duckdb.org/docs/current/sql/statements/create_macro)
