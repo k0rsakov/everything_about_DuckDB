@@ -40,4 +40,18 @@ DuckDB поддерживает constraints (ограничения). Если �
 - [UPDATE Statement](https://duckdb.org/docs/current/sql/statements/update)
 - [Constraints](https://duckdb.org/docs/current/sql/constraints)
 - [INSERT Statement](https://duckdb.org/docs/current/sql/statements/insert#on-conflict-clause)
-  - [ON CONFLICT Clause](https://duckdb.org/docs/current/sql/statements/insert#on-conflict-clause)
+    - [ON CONFLICT Clause](https://duckdb.org/docs/current/sql/statements/insert#on-conflict-clause)
+
+## Быстрые `JOIN`
+
+Быстрые `JOIN` — это один из важных аспектов при работе с данными. И у DuckDB очень быстрые `JOIN` по сравнению с
+другими OLAP решениями. Быстрые `JOIN` в DuckDB — это удар в сторону ClickHouse.
+
+Также отличительным свойством DuckDB является поддержка `ASOF JOIN`. Данный вид `JOIN`, позволяет быстро сопоставить
+события, которые произошли в разное время.
+
+Документация:
+
+- [FROM and JOIN Clauses](https://duckdb.org/docs/current/sql/query_syntax/from)
+- [AsOf Join](https://duckdb.org/docs/current/guides/sql_features/asof_join)
+- [Range Joins in DuckDB](https://duckdb.org/2022/05/27/iejoin)
