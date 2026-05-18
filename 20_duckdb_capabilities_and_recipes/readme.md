@@ -161,9 +161,29 @@ MVCC (Multi-Version Concurrency Control) — это механизм управ�
 - [chDB GitHub](https://github.com/chdb-io/chdb)
 - [Comparing DuckDB, ChDB and Polars like a noob](https://medium.com/@MarinAgli1/comparing-duckdb-chdb-and-polars-like-a-noob-ad74584456b9)
 
+# BI
 
+Так как DuckDB — это OLAP-движок, то его довольно просто интегрировать в различные BI-инструменты.
 
+После такой интеграции у вас появляется использовать все преимущества DuckDB, которые мы рассмотрели.
 
+Документация:
+
+- [duckdb_engine](https://pypi.org/project/duckdb-engine/)
+- [Apache Superset / DuckDB](https://superset.apache.org/user-docs/databases/supported/duckdb/)
+- [Modern Data Stack in a Box with DuckDB](https://duckdb.org/2022/10/12/modern-data-stack-in-a-box#connecting-superset)
+
+> **Полезное.**
+>
+> В своём
+> видео [Лучший пет-проект для дата-инженера (The best pet-project for a data-engineer)](https://youtu.be/MQPHgUQvKnI)
+> я уже использовал связку Metabase + DuckDB, но не делал на этом акцент.
+>
+> Если вы рассмотрите [Dockerfile](https://github.com/k0rsakov/pet_project_earthquake/blob/main/metabase/Dockerfile) из
+> данного проекта, то вы сможете увидеть сборку Metabase + DuckDB.
+>
+> После сборки, вы можете запустить контейнер и подключиться к DuckDB через Metabase, чтобы визуализировать данные о
+> землетрясениях.
 
 
 
