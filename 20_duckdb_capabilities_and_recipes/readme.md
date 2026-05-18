@@ -55,3 +55,14 @@ DuckDB поддерживает constraints (ограничения). Если �
 - [FROM and JOIN Clauses](https://duckdb.org/docs/current/sql/query_syntax/from)
 - [AsOf Join](https://duckdb.org/docs/current/guides/sql_features/asof_join)
 - [Range Joins in DuckDB](https://duckdb.org/2022/05/27/iejoin)
+
+## Profiling (профилирование)
+
+У DuckDB довольно богатый инструментарий для профилирования. Начиная с `EXPLAIN` и заканчивая конфигурированием
+профайлинга.
+
+Документация:
+
+- [Profiling](https://duckdb.org/docs/current/dev/profiling)
+- [DuckDB execution plan visualizer](https://db.cs.uni-tuebingen.de/explain/)
+
