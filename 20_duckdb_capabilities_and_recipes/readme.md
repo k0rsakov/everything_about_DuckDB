@@ -136,6 +136,20 @@ MVCC (Multi-Version Concurrency Control) — это механизм управ�
 - [Concurrency](https://duckdb.org/docs/current/connect/concurrency)
 - [Analytics-Optimized Concurrent Transactions](https://duckdb.org/2024/10/30/analytics-optimized-concurrent-transactions)
 
+## Benchmarks (бенчмарки)
+
+В данном пункте нет цели доказывать, что DuckDB — это самая быстрая база данных.
+
+Поэтому рекомендую самостоятельно изучать различные Benchmarks, которых набралось уже довольно много.
+
+Также рекомендую провести бенчмарки на своих данных, чтобы понять, насколько DuckDB подходит для ваших задач.
+
+Документация:
+
+- [Benchmarks](https://duckdb.org/docs/current/guides/performance/benchmarks)
+- [DuckDB vs. Polars: Performance & Memory on Massive Parquet Data](https://www.codecentric.de/en/knowledge-hub/blog/duckdb-vs-polars-performance-and-memory-with-massive-parquet-data)
+- [DuckDB vs Apache Spark — The Fall of the Cluster?](https://medium.com/@mamidipaka2003/duckdb-vs-apache-spark-the-fall-of-the-cluster-c28bea3e4d38)
+
 
 
 
