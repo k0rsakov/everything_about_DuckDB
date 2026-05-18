@@ -49,7 +49,7 @@ GreenPlum, Snowflake, BigQuery.
 подходит для аналитики, построения отчётов, data science, но не для high-load продакшн-сервисов с миллионами
 параллельных микротранзакций.
 
-![](../svg_images_source_code/oltp_and_olap.svg)
+![](svg_images_source_code/oltp_and_olap.svg)
 
 ### Почему это критично?
 

@@ -23,7 +23,7 @@
   на $100 млн. — [Duck and Roll: MotherDuck is Open for All With \$100M in the Nest](https://motherduck.com/blog/motherduck-open-for-all-with-series-b/)
 - Недавно выпустили обзорную книгу по DuckDB — [DuckDB in Action](https://motherduck.com/duckdb-book-brief/)
 
-#### Создатели DuckDB
+## Создатели DuckDB
 
 - [Hannes Mühleisen](https://hannes.muehleisen.org/research/) — Co-founder & CEO of DuckDB Labs
 

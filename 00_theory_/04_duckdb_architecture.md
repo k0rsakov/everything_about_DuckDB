@@ -2,7 +2,7 @@
 
 Я часто показываю данную картинку, потому что она многое объясняет и показывает как работает технология.
 
-![](../files_images/frontend_x_backend.png)
+![](files_images/frontend_x_backend.png)
 
 К примеру, когда мы выполняем команду `SELECT * FROM tbl` для нас — это некий Frontend, мы описали что хотим получить. А
 на Backend уже происходят разные механизмы получения данных из таблицы `tbl`.
@@ -66,7 +66,7 @@ y = \left\{ (\text{a},\ 3),\ (\text{b},\ 1),\ (\text{a},\ 1),\ (\text{b},\ 2),\ 
 $$
 Далее DuckDB разделяет это всё на $chunk$ размерностью 2048 значений и раскидывает между CPU и RAM:
 
-![](../svg_images_source_code/architecture_of_vector_computing_in_duckdb.svg)
+![](svg_images_source_code/architecture_of_vector_computing_in_duckdb.svg)
 
 Также стоит сказать, что DuckDB использует SIMD-инструкции. К примеру, есть такое понятие как "*инструкции процессора*".
 И DuckDB применяет все возможные инструкции, которые поддерживает ваш процессор.
@@ -86,7 +86,7 @@ $$
 
 Также он использует разные уровни кэша вашего процессора:
 
-![](../svg_images_source_code/efficient_cache_usage_in_duckdb.svg)
+![](svg_images_source_code/efficient_cache_usage_in_duckdb.svg)
 
 Если хотите изучить подробнее работу "*под капотом*", то рекомендую видео:
 
