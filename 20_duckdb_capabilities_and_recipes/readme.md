@@ -303,7 +303,7 @@ DuckDB очень просто установить как Python пакет, ч
 
 - [Connect](https://duckdb.org/docs/current/connect/overview)
 
-## Гигиена DuckDB
+### Гигиена DuckDB
 
 Если вы часто используете DML (`INSERT`, `UPDATE`, `DELETE`) операции в DuckDB и ваша БД создана физически, то она может
 "_пухнуть_", потому что внутри DuckDB используется MVCC и нет `AUTO VACUUM` механизма, который бы удалял старые версии
