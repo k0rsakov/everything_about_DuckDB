@@ -219,6 +219,25 @@ DuckDB отлично интегрируется с DBT, что позволяе
 
 - [Инфраструктура для Data-Engineer DBT](https://habr.com/ru/articles/854990/)
 
+## Работа с гео-данными
+
+DuckDB быстро набрал популярность в сообществе гео-данных, потому что он позволяет быстро считать большие объёмы данных.
+
+Одним из основных моментов в популярности пакета `spatial` является то, что он по использует синтаксис PostGIS, который
+уже знаком многим специалистам, работающим с гео-данными.
+
+А если говорить ещё проще, то раньше все считали данные в PostgreSQL, потому что PostGIS — это расширение для
+PostgreSQL.
+
+А так как мы видим, что DuckDB быстрее PostgreSQL, то многие начали использовать именно DuckDB.
+
+Документация:
+
+- [Spatial Extension](https://duckdb.org/docs/current/core_extensions/spatial/overview)
+- [Spatial Functions](https://duckdb.org/docs/current/core_extensions/spatial/functions)
+- [PostGEESE? Introducing The DuckDB Spatial Extension](https://duckdb.org/2023/04/28/spatial)
+- [Spatial Joins in DuckDB](https://duckdb.org/2025/08/08/spatial-joins)
+
 
 
 
