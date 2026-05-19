@@ -254,12 +254,35 @@ DuckDB очень просто установить как Python пакет, ч
 
 - [Python API](https://duckdb.org/docs/current/clients/python/overview)
 
+## Тонкости DuckDB
 
+Данный раздел может показаться чуть больше, но тут просто хотелось бы сделать акцента на некоторые моменты, которые
+могут быть полезными при работе с DuckDB.
 
+### Отложенные вычисления
 
+По своей природе DuckDB считает быстро, но максимально старается "_отложить_" момент расчётов и при возможности работает
+с мета-данными. Это называется Late materialization (поздняя материализация).
 
+> DuckDB uses a technique called late materialization, where data is only fetched or processed when absolutely
+> necessary. In traditional
+> databases, materializing data (i.e., fetching and loading full rows
+> into memory) is done early in query execution, even if only a subset
+> of columns is needed for the final result. DuckDB, however,
+> postpones this materialization step as much as possible, working with
+> metadata (e.g., column indices) rather than actual row data until it
+> needs to materialize only the specific columns required for the query
+> result.
+> This approach minimizes unnecessary data movement and
+> processing, leading to substantial performance improvements,
+> especially for complex queries that involve filtering or joining large
+> datasets.
+>
+> _DuckDB: Up and Running, Wei-Meng Lee_
 
-
+Также это рассказывается в
+видео [DuckDB: How to Build 100x Faster Analytics Databases (with Co-Creator Hannes Mühleisen)](https://youtu.be/pZV9FvdKmLc?si=8UV3tXjVKgwPdLb8).
+Тайм-код — 1:12:57 (t4377)
 
 
 
