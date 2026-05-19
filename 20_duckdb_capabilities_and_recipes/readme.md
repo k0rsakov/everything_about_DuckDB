@@ -161,7 +161,7 @@ MVCC (Multi-Version Concurrency Control) — это механизм управ�
 - [chDB GitHub](https://github.com/chdb-io/chdb)
 - [Comparing DuckDB, ChDB and Polars like a noob](https://medium.com/@MarinAgli1/comparing-duckdb-chdb-and-polars-like-a-noob-ad74584456b9)
 
-# BI
+## BI
 
 Так как DuckDB — это OLAP-движок, то его довольно просто интегрировать в различные BI-инструменты.
 
@@ -185,8 +185,25 @@ MVCC (Multi-Version Concurrency Control) — это механизм управ�
 > После сборки, вы можете запустить контейнер и подключиться к DuckDB через Metabase, чтобы визуализировать данные о
 > землетрясениях.
 
+## Встроенный менеджер секретов
 
+В примерах ранее мы не использовали скрытия секретов, к примеру здесь:
 
+```sql
+ATTACH 'dbname=postgres user=postgres host=localhost password=postgres' AS db (TYPE postgres, SCHEMA 'public');
+```
+
+Все данные открыты, но при помощи менеджера секретов их можно спрятать на уровне БД, чтобы обращаться к ним без
+указания.
+
+Документация:
+
+- [Secrets Manager](https://duckdb.org/docs/current/configuration/secrets_manager)
+- [CREATE SECRET Statement](https://duckdb.org/docs/current/sql/statements/create_secret)
+- [Securing DuckDB](https://duckdb.org/docs/current/operations_manual/securing_duckdb/overview)
+
+Также для работы с безопасностью в DuckDB рекомендую
+документацию [Securing DuckDB](https://duckdb.org/docs/current/operations_manual/securing_duckdb/overview).
 
 
 
