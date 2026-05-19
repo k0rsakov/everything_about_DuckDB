@@ -319,11 +319,27 @@ DuckDB очень просто установить как Python пакет, ч
 - [VACUUM Statement](https://duckdb.org/docs/current/sql/statements/vacuum)
 - [EXPORT and IMPORT DATABASE Statements](https://duckdb.org/docs/current/sql/statements/export)
 
+### Кластер для DuckDB
 
+DuckDB всё время развивался как embedded (встраиваемая) база данных, которая работает на одном узле. Но с ростом
+популярности DuckDB, многие компании начали создавать свои решения на основе DuckDB, которые поддерживают кластеризацию.
 
+Из актуального рекомендовал бы обратить внимание на:
 
+- [Quack: Turn DuckDB into a client-server database](https://duckdb.org/quack/)
 
+Также есть такие реализации:
 
+- [httpserver](https://github.com/Query-farm/httpserver)
+- [buenavista](https://github.com/jwills/buenavista)
+
+Документация:
+
+- [Quack: Turn DuckDB into a client-server database](https://duckdb.org/quack/)
+- [The Quack Client/Server Protocol for DuckDB](https://github.com/duckdb/duckdb-quack)
+- [Quack: The DuckDB Client-Server Protocol](https://duckdb.org/2026/05/12/quack-remote-protocol)
+- [httpserver](https://github.com/Query-farm/httpserver)
+- [buenavista](https://github.com/jwills/buenavista)
 
 
 
