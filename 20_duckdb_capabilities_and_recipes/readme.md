@@ -238,7 +238,21 @@ PostgreSQL.
 - [PostGEESE? Introducing The DuckDB Spatial Extension](https://duckdb.org/2023/04/28/spatial)
 - [Spatial Joins in DuckDB](https://duckdb.org/2025/08/08/spatial-joins)
 
+## ETL/ELT/EL + DuckDB
 
+Так как DuckDB является мощным движком для вычислений, он очень просто встраивается в различные ETL/ELT/EL пайплайны.
+
+В своём
+видео [Лучший пет-проект для дата-инженера (The best pet-project for a data-engineer)](https://youtu.be/MQPHgUQvKnI). Я
+как раз использую DuckDB как удобный вычислитель, который сразу обращается к API и складывает данные в S3.
+
+DuckDB очень просто установить как Python пакет, что мы рассмотрели в данном
+примере — [04_quick_start_python](../04_quick_start_python) или использовать через Docker, что мы рассмотрели в данном
+примере — [15_duckdb_containerization](../15_duckdb_containerization).
+
+Документация:
+
+- [Python API](https://duckdb.org/docs/current/clients/python/overview)
 
 
 
