@@ -300,10 +300,24 @@ DuckDB очень просто установить как Python пакет, ч
 - Вы можете передавать данные физически в удобном формате для ad-hoc задач.
 
 Документация:
+
 - [Connect](https://duckdb.org/docs/current/connect/overview)
 
+## Гигиена DuckDB
 
+Если вы часто используете DML (`INSERT`, `UPDATE`, `DELETE`) операции в DuckDB и ваша БД создана физически, то она может
+"_пухнуть_", потому что внутри DuckDB используется MVCC и нет `AUTO VACUUM` механизма, который бы удалял старые версии
+данных.
 
+Поэтому тут две рекомендации:
+
+1) Делайте `VACUUM` вручную, чтобы удалять старые версии данных и освобождать место на диске.
+2) Периодически делайте экспорт и импорт данных для данной базы данных.
+
+Документация:
+
+- [VACUUM Statement](https://duckdb.org/docs/current/sql/statements/vacuum)
+- [EXPORT and IMPORT DATABASE Statements](https://duckdb.org/docs/current/sql/statements/export)
 
 
 
