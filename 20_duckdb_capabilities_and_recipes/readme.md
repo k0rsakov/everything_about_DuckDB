@@ -205,8 +205,19 @@ ATTACH 'dbname=postgres user=postgres host=localhost password=postgres' AS db (T
 Также для работы с безопасностью в DuckDB рекомендую
 документацию [Securing DuckDB](https://duckdb.org/docs/current/operations_manual/securing_duckdb/overview).
 
+## DBT + DuckDB
 
+DuckDB отлично интегрируется с DBT, что позволяет использовать все мощности DuckDB как вычислителя. Есть отдельный пакет
+[dbt-duckdb](https://github.com/duckdb/dbt-duckdb), который вы можете установить и использовать для своих трансформаций.
 
+Документация:
+
+- [dbt-duckdb](https://github.com/duckdb/dbt-duckdb)
+- [Fully Local Data Transformation with dbt and DuckDB](https://duckdb.org/2025/04/04/dbt-duckdb)
+
+Полезные ссылки:
+
+- [Инфраструктура для Data-Engineer DBT](https://habr.com/ru/articles/854990/)
 
 
 
