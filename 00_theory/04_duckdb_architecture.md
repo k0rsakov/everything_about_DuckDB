@@ -91,4 +91,4 @@ $$
 Если хотите изучить подробнее работу "*под капотом*", то рекомендую видео:
 
 - [DuckDB: How to Build 100x Faster Analytics Databases (with Co-Creator Hannes Mühleisen)](https://www.youtube.com/watch?v=pZV9FvdKmLc)
-- [@duckdb‬ Internals with Mark Raasveldt ‪@duckdb3282‬](https://youtu.be/f9QlkXW4H9A?si=8_zhJBVGtqjpLVQ6) 
+- [@duckdb Internals with Mark Raasveldt @duckdb3282](https://youtu.be/f9QlkXW4H9A?si=8_zhJBVGtqjpLVQ6) 
