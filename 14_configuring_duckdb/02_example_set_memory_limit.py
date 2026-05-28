@@ -19,6 +19,32 @@ def measure_time(func):
     return wrapper
 
 
+@measure_time
+def create_orders_dataset():
+    duckdb.query(
+        """
+        INSTALL fakeit FROM community;
+        LOAD fakeit;
+    
+        CREATE OR REPLACE TABLE orders AS 
+        SELECT
+            DATE '2025-01-01' + CAST(random() * 365 AS INTEGER) AS order_date,
+            fakeit_uuid_v4() as order_uuid,
+            fakeit_uuid_v4() as customer_uuid,
+            fakeit_uuid_v4() as employee_uuid,
+            fakeit_address_city() AS city,
+            fakeit_currency_price()::FLOAT as amount,
+            fakeit_payment_credit_card_type() as payment_method
+        FROM
+            generate_series(1, 15_000_000);
+        """
+    )
+
+
+create_orders_dataset()
+
+print("Текущий лимит памяти:")
+
 print(
     duckdb.query(
         """
@@ -31,31 +57,26 @@ print(
 
 
 @measure_time
-def execute_query_without_limit():
+def execute_sort_without_limit():
     duckdb.query(
         """
-        INSTALL fakeit FROM community;
-        LOAD fakeit;
-
-        CREATE OR REPLACE TABLE orders AS 
-        SELECT
-            DATE '2025-01-01' + CAST(random() * 365 AS INTEGER) AS order_date,
-            fakeit_uuid_v4() as order_uuid,
-            fakeit_uuid_v4() as customer_uuid,
-            fakeit_uuid_v4() as employee_uuid,
-            fakeit_address_city() AS city,
-            fakeit_currency_price()::FLOAT as amount,
-            fakeit_payment_credit_card_type() as payment_method
-        FROM
-            generate_series(1, 10_000_000)
+        CREATE OR REPLACE TABLE sorted_orders AS 
+        SELECT * 
+        FROM orders
+        ORDER BY
+            city,
+            amount DESC,
+            order_date;
         """
     )
 
 
-execute_query_without_limit()
+execute_sort_without_limit()
 
 duckdb.query("SET memory_limit TO '1GB';")
 
+print("\n\nТекущий лимит памяти после установки ограничения:")
+
 print(
     duckdb.query(
         """
@@ -68,25 +89,18 @@ print(
 
 
 @measure_time
-def execute_query_with_limit():
+def execute_sort_with_limit():
     duckdb.query(
         """
-        INSTALL fakeit FROM community;
-        LOAD fakeit;
-
-        CREATE OR REPLACE TABLE orders AS 
-        SELECT
-            DATE '2025-01-01' + CAST(random() * 365 AS INTEGER) AS order_date,
-            fakeit_uuid_v4() as order_uuid,
-            fakeit_uuid_v4() as customer_uuid,
-            fakeit_uuid_v4() as employee_uuid,
-            fakeit_address_city() AS city,
-            fakeit_currency_price()::FLOAT as amount,
-            fakeit_payment_credit_card_type() as payment_method
-        FROM
-            generate_series(1, 10_000_000)
+        CREATE OR REPLACE TABLE sorted_orders_limited AS 
+        SELECT *
+        FROM orders 
+        ORDER BY
+            city,
+            amount DESC,
+            order_date;
         """
     )
 
 
-execute_query_with_limit()
+execute_sort_with_limit()
