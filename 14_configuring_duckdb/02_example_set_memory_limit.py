@@ -31,7 +31,7 @@ print(
 
 
 @measure_time
-def execute_query():
+def execute_query_without_limit():
     duckdb.query(
         """
         INSTALL fakeit FROM community;
@@ -52,7 +52,7 @@ def execute_query():
     )
 
 
-execute_query()
+execute_query_without_limit()
 
 duckdb.query("SET memory_limit TO '1GB';")
 
@@ -68,7 +68,7 @@ print(
 
 
 @measure_time
-def execute_query():
+def execute_query_with_limit():
     duckdb.query(
         """
         INSTALL fakeit FROM community;
@@ -89,4 +89,4 @@ def execute_query():
     )
 
 
-execute_query()
+execute_query_with_limit()
