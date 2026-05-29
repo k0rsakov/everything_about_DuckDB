@@ -13,7 +13,13 @@
     - [DockerHub pgduckdb/pgduckdb](https://hub.docker.com/r/pgduckdb/pgduckdb)
 - [Data Types](https://duckdb.org/docs/current/sql/data_types/overview)
 
-Demo SQL:
+## Сборка проекта
+
+```bash
+docker compose up -d
+```
+
+## Demo SQL
 
 ```sql
 SET duckdb.force_execution = false;
