@@ -12,6 +12,12 @@
 - [Reading Multiple Files](https://duckdb.org/docs/current/data/multiple_files/overview)
 - [Partitioned Writes](https://duckdb.org/docs/lts/data/partitioning/partitioned_writes)
 
+## Сборка проекта
+
+```bash
+docker compose up -d
+```
+
 ## `VIEW` для упрощения работы с S3
 
 Не всегда удобно и легко прописывать пути в S3. Поэтому можно создавать представления (`VIEW`) для более быстрой работы
