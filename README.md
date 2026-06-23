@@ -60,32 +60,31 @@
 
 ## О проекте
 
-- [00_theory](00_theory)
-- [01_sql_is_everything](01_sql_is_everything)
-- [02_quick_start_cli](02_quick_start_cli)
-- [03_quick_start_dbeaver](03_quick_start_dbeaver)
-- [04_quick_start_python](04_quick_start_python)
-- [05_python_duckdb_connect](05_python_duckdb_connect)
-- [06_read_diff_file_formats_duckdb](06_read_diff_file_formats_duckdb)
-  - [00_theory](06_read_diff_file_formats_duckdb/00_theory)
-- [07_read_diff_schema](07_read_diff_schema)
-- [08_working_with_pandas_using_duckdb](08_working_with_pandas_using_duckdb)
-- [09_python_function_in_duckdb](09_python_function_in_duckdb)
-- [10_introduction_duckdb_extensions](10_introduction_duckdb_extensions)
-- [11_using_duckdb_extension](11_using_duckdb_extension)
-- [12_calling_api_using_duckdb](12_calling_api_using_duckdb)
-- [13_sql_features_in_duckdb](13_sql_features_in_duckdb)
-- [14_configuring_duckdb](14_configuring_duckdb)
-- [15_duckdb_containerization](15_duckdb_containerization)
-  - [01_docker_duckdb_cli](15_duckdb_containerization/01_docker_duckdb_cli)
-  - [02_docker_duckdb_python](15_duckdb_containerization/02_docker_duckdb_python)
-  - [03_docker_official_image](15_duckdb_containerization/03_docker_official_image)
-- [16_using_duckdb_with_minio_s3](16_using_duckdb_with_minio_s3)
-- [17_using_duckdb_with_postgresql](17_using_duckdb_with_postgresql)
-- [18_using_extension_pg_duckdb](18_using_extension_pg_duckdb)
-- [19_using_jupysql_for_duckdb_in_jupyterlab](19_using_jupysql_for_duckdb_in_jupyterlab)
-- [20_duckdb_capabilities_and_recipes](20_duckdb_capabilities_and_recipes)
-
+- [00_theory](00_theory) — Теория (История создания DuckDB, специфика OLAP, поддержка ACID, внутренняя архитектура и векторизованный движок, реальные объемы данных в современной аналитике)
+- [01_sql_is_everything](01_sql_is_everything) — SQL для всего и его важность в DuckDB
+- [02_quick_start_cli](02_quick_start_cli) — Быстрый старт DuckDB через интерфейс командной строки (CLI)
+- [03_quick_start_dbeaver](03_quick_start_dbeaver) — Быстрый старт DuckDB в DBeaver
+- [04_quick_start_python](04_quick_start_python) — Быстрый старт DuckDB в экосистеме Python
+- [05_python_duckdb_connect](05_python_duckdb_connect) — Способы подключения (Python DuckDB connect)
+- [06_read_diff_file_formats_duckdb](06_read_diff_file_formats_duckdb) — Чтение различных форматов файлов (`.parquet`, `.csv` и `.json`)
+  - [00_theory](06_read_diff_file_formats_duckdb/00_theory) — Теория по форматам файлов
+- [07_read_diff_schema](07_read_diff_schema) — Работа с динамическими и сложными схемами данных
+- [08_working_with_pandas_using_duckdb](08_working_with_pandas_using_duckdb) — Интеграция и работа с библиотекой Pandas
+- [09_python_function_in_duckdb](09_python_function_in_duckdb) — Написание и запуск своих Python-функций внутри DuckDB
+- [10_introduction_duckdb_extensions](10_introduction_duckdb_extensions) — Знакомство с экосистемой расширений (Extensions)
+- [11_using_duckdb_extension](11_using_duckdb_extension) — Практическое применение расширений DuckDB
+- [12_calling_api_using_duckdb](12_calling_api_using_duckdb) — Прямые вызовы внешних API через SQL в DuckDB
+- [13_sql_features_in_duckdb](13_sql_features_in_duckdb) — Крутые фишки и диалекты современного SQL в DuckDB
+- [14_configuring_duckdb](14_configuring_duckdb) — Тонкая настройка и конфигурация движка DuckDB
+- [15_duckdb_containerization](15_duckdb_containerization) — Контейнеризация DuckDB. DuckDB in Docker
+  - [01_docker_duckdb_cli](15_duckdb_containerization/01_docker_duckdb_cli) — Запуск DuckDB CLI в Docker
+  - [02_docker_duckdb_python](15_duckdb_containerization/02_docker_duckdb_python) — Использование DuckDB с Python в Docker
+  - [03_docker_official_image](15_duckdb_containerization/03_docker_official_image) — Работа с официальным Docker-образом DuckDB
+- [16_using_duckdb_with_minio_s3](16_using_duckdb_with_minio_s3) — Интеграция с объектным хранилищем MinIO S3
+- [17_using_duckdb_with_postgresql](17_using_duckdb_with_postgresql) — Совместное использование DuckDB и PostgreSQL
+- [18_using_extension_pg_duckdb](18_using_extension_pg_duckdb) — Разбор расширения `pg_duckdb` для PostgreSQL
+- [19_using_jupysql_for_duckdb_in_jupyterlab](19_using_jupysql_for_duckdb_in_jupyterlab) — Интеграция с JupyterLab при помощи JupySQL
+- [20_duckdb_capabilities_and_recipes](20_duckdb_capabilities_and_recipes) — Продвинутые возможности и готовые рецепты для продакшена
 
 ### Виртуальное окружение
 
